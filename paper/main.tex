@@ -44,7 +44,7 @@ Let $P=(p_{ij})$ be an irreducible transition matrix on a finite set $V$, revers
 \]
 so that $\tau_2=\sup_f \operatorname{Var}_\pi(f)/\mathcal E(f)$ over nonconstant $f$ \cite[Ch.~3]{AF}.
 
-Chapter~4 of Aldous and Fill \cite{AF} bounds $\tau_2$ above by quantities defined as minima over flows, in the line of Diaconis and Stroock \cite{DS} and Sinclair \cite{S}: a family of flows routes a demand $\pi_a\pi_b$ from each $a$ to each $b$, and a congestion functional of the family, measured against the conductances, is minimised. Their Open Problem~3.44 asks: ``Does there exist a characterization of the relaxation time as exactly an inf over flows?'' The source adds that ``it would be more elegant to derive such inequalities from some exact characterization''.
+Chapter~4 of Aldous and Fill \cite{AF} bounds $\tau_2$ above by quantities defined as minima over flows, in the line of Jerrum and Sinclair \cite{JS}, Diaconis and Stroock \cite{DS} and Sinclair \cite{S}: a family of flows routes a demand $\pi_a\pi_b$ from each $a$ to each $b$, and a congestion functional of the family, measured against the conductances, is minimised. Their Open Problem~3.44 asks: ``Does there exist a characterization of the relaxation time as exactly an inf over flows?'' The source adds that ``it would be more elegant to derive such inequalities from some exact characterization''.
 
 Some restriction on the shape of the characterization is needed for the question to have content, since a constant functional of the flows equal to $\tau_2$ is an infimum over flows. The natural restriction is the one the chapter's bounds satisfy: a congestion functional or an energy, minimised over flows subject to linear constraints. Programs of this kind are linear or convex quadratic programs in the flow variables, with data rational in the entries of $P$. The answer for them is negative.
 
@@ -109,7 +109,7 @@ N(d)=2\sum_{s=1}^k\operatorname{Var}_\pi(x^{(s)})\le 2\tau_2\sum_{s=1}^k\mathcal
 by the variational formula applied to each coordinate. Equality holds for $k=1$ and $x$ an eigenvector of $\lambda_2$, normalised so that $C(d)=1$.
 \end{proof}
 
-By Schoenberg's theorem \cite{Sch}, the functions in (ii) are exactly the semimetrics of negative type. The cone of negative type semimetrics on $V$ is not polyhedral when $|V|\ge3$, since it is linearly isomorphic to the cone of positive semidefinite $(|V|-1)\times(|V|-1)$ matrices. Squared Euclidean distances need not satisfy the triangle inequality, and metrics need not be of negative type (the graph metric of $K_{2,3}$ is not), so neither cone contains the other. Proposition~\ref{prop:cones} places $\kappa$ and $2\tau_2$ as values of one objective on two different cones. It does not give an inequality between them, and none holds in general from this description alone.
+By Schoenberg's theorem \cite{Sch}, the functions in (ii) are exactly the semimetrics of negative type. The cone of negative type semimetrics on $V$ is not polyhedral when $|V|\ge3$, since it is linearly isomorphic to the cone of positive semidefinite $(|V|-1)\times(|V|-1)$ matrices. Squared Euclidean distances need not satisfy the triangle inequality, and metrics need not be of negative type (the graph metric of $K_{2,3}$ is not), so neither cone contains the other. Passing from metrics to negative type semimetrics is the step behind the semidefinite relaxation of sparsest cut of Arora, Rao and Vazirani \cite{ARV}. Kahale \cite{K} showed that the best bound on the spectral gap given by flows with weighted paths is the value of a semidefinite program and differs from the spectral gap by at most a polylogarithmic factor in the number of states. Proposition~\ref{prop:cones} places $\kappa$ and $2\tau_2$ as values of one objective on two different cones. It does not give an inequality between them, and none holds in general from this description alone.
 
 \section{Computations}\label{sec:numerics}
 
@@ -141,17 +141,23 @@ No data were used. The code is available at\\ \url{https://github.com/yspennstat
 
 The paper is part of the Math Brain project, whose public repository is \url{https://github.com/yspennstate/math-brain-public}~\cite{MathBrainRepo}.
 
-\begin{thebibliography}{10}
+\begin{thebibliography}{99}
 
 \bibitem{AF}
 D.~Aldous and J.~A.~Fill, \emph{Reversible Markov Chains and Random Walks on Graphs}, unfinished monograph, 2002, recompiled 2014, \url{https://www.stat.berkeley.edu/~aldous/RWG/book.html}.
 
+\bibitem{ARV}
+S.~Arora, S.~Rao and U.~Vazirani, Expander flows, geometric embeddings and graph partitioning, \emph{J. ACM} \textbf{56} (2009), no.~2, Art.~5, 1--37.
 \bibitem{DS}
 P.~Diaconis and D.~Stroock, Geometric bounds for eigenvalues of Markov chains, \emph{Ann. Appl. Probab.} \textbf{1} (1991), 36--61.
 
 \bibitem{FW}
 M.~Frank and P.~Wolfe, An algorithm for quadratic programming, \emph{Naval Res. Logist. Quart.} \textbf{3} (1956), 95--110.
 
+\bibitem{JS}
+M.~Jerrum and A.~Sinclair, Approximating the permanent, \emph{SIAM J. Comput.} \textbf{18} (1989), 1149--1178.
+\bibitem{K}
+N.~Kahale, A semidefinite bound for mixing rates of Markov chains, \emph{Random Structures Algorithms} \textbf{11} (1997), 299--313.
 \bibitem{LR}
 T.~Leighton and S.~Rao, Multicommodity max-flow min-cut theorems and their use in designing approximation algorithms, \emph{J. ACM} \textbf{46} (1999), 787--832.
 
