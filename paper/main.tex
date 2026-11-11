@@ -44,7 +44,7 @@ Let $P=(p_{ij})$ be an irreducible transition matrix on a finite set $V$, revers
 \]
 so that $\tau_2=\sup_f \operatorname{Var}_\pi(f)/\mathcal E(f)$ over nonconstant $f$ \cite[Ch.~3]{AF}.
 
-Chapter~4 of Aldous and Fill \cite{AF} bounds $\tau_2$ above by quantities defined as minima over flows, in the line of Jerrum and Sinclair \cite{JS}, Diaconis and Stroock \cite{DS} and Sinclair \cite{S}: a family of flows routes a demand $\pi_a\pi_b$ from each $a$ to each $b$, and a congestion functional of the family, measured against the conductances, is minimised. Their Open Problem~3.44 asks: ``Does there exist a characterization of the relaxation time as exactly an inf over flows?'' The source adds that ``it would be more elegant to derive such inequalities from some exact characterization''.
+Chapter~4 of Aldous and Fill \cite{AF} bounds $\tau_2$ above by quantities defined as minima over flows, in the line of Jerrum and Sinclair \cite{JS}, Diaconis and Stroock \cite{DS}, Sinclair \cite{S} and the comparison theorems of Diaconis and Saloff-Coste \cite{DSC}: a family of flows routes a demand $\pi_a\pi_b$ from each $a$ to each $b$, and a congestion functional of the family, measured against the conductances, is minimised. Their Open Problem~3.44 asks: ``Does there exist a characterization of the relaxation time as exactly an inf over flows?'' The source adds that ``it would be more elegant to derive such inequalities from some exact characterization''.
 
 Some restriction on the shape of the characterization is needed for the question to have content, since a constant functional of the flows equal to $\tau_2$ is an infimum over flows. The natural restriction is the one the chapter's bounds satisfy: a congestion functional or an energy, minimised over flows subject to linear constraints. Programs of this kind are linear or convex quadratic programs in the flow variables, with data rational in the entries of $P$. The answer for them is negative.
 
@@ -67,7 +67,7 @@ Let $\kappa$ be the minimum, over all families of flows routing $\pi_a\pi_b$ fro
 \end{enumerate}
 \end{proposition}
 
-Part (i) is the flow--metric duality for uniform multicommodity flow \cite{LR,LLR}; part (ii) is the variational formula for $\tau_2$ written for vector-valued functions. The functions in (ii) are the semimetrics of negative type \cite{Sch}, which form a cone that is not polyhedral. The congestion program and the relaxation time thus optimise the same objective under the same normalisation over two different cones, and the program over the metric cone is linear while the one over the negative type cone is semidefinite. On the path with six vertices the two values are $\kappa=5$ and $2\tau_2=6+2\sqrt5$.
+Part (i) is the flow--metric duality for uniform multicommodity flow \cite{LR,LLR}; part (ii) is the variational formula for $\tau_2$ written for vector-valued functions. The functions in (ii) are the semimetrics of negative type \cite{Sch}, which form a cone that is not polyhedral. The congestion program and the relaxation time thus optimise the same objective under the same normalisation over two different cones, and the program over the metric cone is linear while the one over the negative type cone is semidefinite. Semidefinite programs over such embeddings appear in the fastest mixing Markov chain problem of Boyd, Diaconis and Xiao \cite{BDX}, whose dual for Markov processes is the maximum variance unfolding problem of Sun, Boyd, Xiao and Diaconis \cite{SBXD}, and in the embeddings of G\"oring, Helmberg and Wappler \cite{GHW} for the algebraic connectivity. On the path with six vertices the two values are $\kappa=5$ and $2\tau_2=6+2\sqrt5$.
 
 Theorem~\ref{thm:main} leaves open whether some natural nonlinear functional of flows has optimum exactly $\tau_2$. The proof applies to any quantity that is irrational on a chain with rational transition probabilities, and in the other direction it says nothing about quantities such as the maximal mean hitting time, which solve linear systems and are rational on rational chains.
 
@@ -148,11 +148,17 @@ D.~Aldous and J.~A.~Fill, \emph{Reversible Markov Chains and Random Walks on Gra
 
 \bibitem{ARV}
 S.~Arora, S.~Rao and U.~Vazirani, Expander flows, geometric embeddings and graph partitioning, \emph{J. ACM} \textbf{56} (2009), no.~2, Art.~5, 1--37.
+\bibitem{BDX} S.~Boyd, P.~Diaconis and L.~Xiao, Fastest mixing Markov chain on a graph, \emph{SIAM Rev.} \textbf{46} (2004), 667--689.
+
 \bibitem{DS}
 P.~Diaconis and D.~Stroock, Geometric bounds for eigenvalues of Markov chains, \emph{Ann. Appl. Probab.} \textbf{1} (1991), 36--61.
 
+\bibitem{DSC} P.~Diaconis and L.~Saloff-Coste, Comparison theorems for reversible Markov chains, \emph{Ann. Appl. Probab.} \textbf{3} (1993), 696--730.
+
 \bibitem{FW}
 M.~Frank and P.~Wolfe, An algorithm for quadratic programming, \emph{Naval Res. Logist. Quart.} \textbf{3} (1956), 95--110.
+
+\bibitem{GHW} F.~G\"oring, C.~Helmberg and M.~Wappler, Embedded in the shadow of the separator, \emph{SIAM J. Optim.} \textbf{19} (2008), 472--501.
 
 \bibitem{JS}
 M.~Jerrum and A.~Sinclair, Approximating the permanent, \emph{SIAM J. Comput.} \textbf{18} (1989), 1149--1178.
@@ -178,6 +184,8 @@ Y.~Shmalo, Code for ``The relaxation time is not the value of a flow program'', 
 \bibitem{MathBrainPaper} Y.~Shmalo, \emph{Math Brain: shared, auditable memory for multi-agent mathematical research}, October 2026, \url{https://github.com/yspennstate/math-brain-public/tree/main/papers/math-brain-2026-10-24}.
 
 \bibitem{BrainFramework} Y.~Shmalo, \emph{Brain Framework}, public software repository, 2026, \url{https://github.com/yspennstate/brain-framework-public}.
+
+\bibitem{SBXD} J.~Sun, S.~Boyd, L.~Xiao and P.~Diaconis, The fastest mixing Markov process on a graph and a connection to a maximum variance unfolding problem, \emph{SIAM Rev.} \textbf{48} (2006), 681--699.
 
 \end{thebibliography}
 \end{document}
